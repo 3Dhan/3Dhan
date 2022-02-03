@@ -982,7 +982,7 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			width: 100%;
+			width: 300px;
 		}
 
 		.image.left {
