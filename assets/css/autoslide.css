@@ -1,6 +1,5 @@
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
     position: relative;
     margin: auto;
   }
@@ -33,6 +32,9 @@
 
   .nav span i {
     color: #7eb2aa;
+  }
+  .nav span i:hover {
+    cursor: pointer;
   }
 
   /* .slide:hover ~ .nav-text {

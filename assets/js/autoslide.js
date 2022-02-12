@@ -29,11 +29,11 @@ function startSlide() {
 function checkAnimationRange() {
     var twoPosY = $("#two").position().top;
     var workPosY = $("#work").position().top;
-    var contactPosY = $("#contact").position().top;
+    var work2PosY = $("#work2").position().top;
     var curScrollY = window.scrollY;
 
     var srcRng = workPosY - ((workPosY - twoPosY) / 2);
-    var dstRng = contactPosY - ((contactPosY - workPosY) / 2);
+    var dstRng = work2PosY - ((work2PosY - workPosY) / 2);
 
     //console.log(srcRng + " >= " + curScrollY + " <= " + dstRng);
     return !( srcRng >= curScrollY && curScrollY <= dstRng );

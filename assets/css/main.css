@@ -616,14 +616,15 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table {
-		margin-bottom: 1em;
+		margin-bottom: 0em;
+		font-size: 11pt;
+		font-weight: 400;
 	}
 
 /* Box */
 
 	.box {
-		background: #ffffff;
-		color: #39454b;
+		color: #ffffff;
 		padding: 2em;
 	}
 
@@ -2299,14 +2300,17 @@ input, select, textarea {
 	}
 
 
-/* Contact */
 
-	#contact {
-		overflow: hidden;
-		padding-bottom: 0;
+/* work2 */
+
+	#work2 {
+		background: url("images/overlay.png"), url("../../images/work.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
 	}
 
-		#contact .box {
+		#work2 .box {
 			-moz-transition: -moz-transform 1s ease;
 			-webkit-transition: -webkit-transform 1s ease;
 			-ms-transition: -ms-transform 1s ease;
@@ -2318,7 +2322,7 @@ input, select, textarea {
 			position: relative;
 		}
 
-		#contact.inactive .box {
+		#work2.inactive .box {
 			-moz-transform: translateY(100%);
 			-webkit-transform: translateY(100%);
 			-ms-transform: translateY(100%);
@@ -2327,7 +2331,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#contact .box {
+			#work2 .box {
 				padding: 1.5em 1.5em 2em 1.5em;
 			}
 
@@ -2335,7 +2339,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 480px) {
 
-			#contact .box {
+			#work2 .box {
 				padding: 1em 1em 2em 1em;
 			}
 
