@@ -5,7 +5,6 @@
 */
 
 (function($) {
-
 	var	$window = $(window),
 		$body = $('body'),
 		$header = $('#header'),
@@ -22,11 +21,35 @@
 		});
 
 	// Play initial animations on page load.
-		$window.on('load', function() {
-			setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
+	$window.on('load', function() {
+		setTimeout(function() {
+		   $body.removeClass('is-preload');
+		}, 100);
+		
+		//Language
+		$(".listheader").click(function() {
+		   var duration = 500;
+		   var op = $(".listbody").css("display") === "none";
+
+		   //console.log("listbody : " + $(".listbody").css("width") + "," + $(".listbody").css("height"))
+
+		   if ( op ) { //Hide => Show
+			  $(".listbody").css("display", "inline-flex");
+			$(".listbody").stop().animate({width: 250, height: 70}, duration);
+
+			  setTimeout(function() {
+				 $(".listbody").stop().animate({width: 0, height: 0}, duration, function() {
+					$(".listbody").css("display", "none");
+				 });
+			  }, 3000); //3초후 자동으로 닫힘
+		   } else {
+			  $(".listbody").stop().animate({width: 0, height: 0}, duration, function() {
+				 $(".listbody").css("display", "none");
+			  });
+		   }
+
 		});
+	 });
 
 	// Touch mode.
 		if (browser.mobile)
