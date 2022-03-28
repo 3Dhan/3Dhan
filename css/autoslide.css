@@ -1,0 +1,69 @@
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Navigation Text: 2022-02-10 */
+  .nav {
+    background-color: #3f443f;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 150px;
+    display: flex;
+    border-radius: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav .nav-text {
+    color: #7eb2aa;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    flex: 2;
+  }
+
+  .nav span {
+    vertical-align: middle;
+    flex: 1;
+  }
+
+  .nav span i {
+    color: #7eb2aa;
+  }
+  .nav span i:hover {
+    cursor: pointer;
+  }
+
+  /* .slide:hover ~ .nav-text {
+      color: #717171;
+  } */
+
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
